@@ -14,3 +14,7 @@ connecting whatsapp and google gemini AI model
 - the defualt 5000 port for flask server is used by airplay in mac so use 3000
 
 
+Used AthulNoobie code for connecting whatsapp webhook and Gemini model. Found it after lot of issues. 
+Link - https://github.com/AthulNoobie/Whatsapp_Gemini_AI_Bot
+
+
