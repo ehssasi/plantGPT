@@ -5,18 +5,15 @@ import os
 
 # setting up tokens and APIs
 
-access_token = "EAAXkBUSr35oBO9xThOYWTCu7OMvwNTrwwJ8NUNWi1CLYq6S4qxZAYFCFkulUqiFsD74ypzUaWSCc5GQL6eOBtxcuKCQ1rznjZBk4vXkd1unf5nwA1xxyOkE0tqStJZBQQcUKgJvRLWaCFUVAGwMP4GeJklBZAnZCndttbaa5RWKBeyAibTCCGQNnhZAYcytg1gJGctmRRAJfH1N4S0zPZBfTsMX3k9UVciJ2JHmZC4jn"
-VERIFY_TOKEN = "esausin"  
-#whatsapp_api_url = "https://graph.facebook.com/v20.0/yourid/messages"
-whatsapp_api_url = "https://graph.facebook.com/v20.0/440740459111490/messages"
-genai.configure(api_key="AIzaSyCWjpHTVPFceU8EEHPnQqJAKuxIb_FSA-8")
-
-name="5 min AI" 
-bot_name="Hello I am AI bot"
-model_name="gemini-1.5-flash" 
+wa_token=os.environ.get("WA_TOKEN")
+genai.configure(api_key=os.environ.get("GEN_API"))
+phone_id=os.environ.get("PHONE_ID")
+phone=os.environ.get("PHONE_NUMBER")
+name="Saurabh S" #The bot will consider this person as its owner or creator
+bot_name="Saurabhs personal AI Assistant" #This will be the name of your bot, eg: "Hello I am Astro Bot"
+model_name="gemini-1.5-flash-latest" #Switch to "gemini-1.0-pro" or any free model, if "gemini-1.5-flash" becomes paid in future.
 
 app=Flask(__name__)
-
 
 # setting up the model
 
