@@ -5,10 +5,11 @@ import os
 
 # setting up tokens and APIs
 
-access_token = "your token"
-VERIFY_TOKEN = "random"  
-whatsapp_api_url = "https://graph.facebook.com/v20.0/yourid/messages"
-genai.configure(api_key="your api key from google ai studio")
+access_token = "EAAXkBUSr35oBO9xThOYWTCu7OMvwNTrwwJ8NUNWi1CLYq6S4qxZAYFCFkulUqiFsD74ypzUaWSCc5GQL6eOBtxcuKCQ1rznjZBk4vXkd1unf5nwA1xxyOkE0tqStJZBQQcUKgJvRLWaCFUVAGwMP4GeJklBZAnZCndttbaa5RWKBeyAibTCCGQNnhZAYcytg1gJGctmRRAJfH1N4S0zPZBfTsMX3k9UVciJ2JHmZC4jn"
+VERIFY_TOKEN = "esausin"  
+#whatsapp_api_url = "https://graph.facebook.com/v20.0/yourid/messages"
+whatsapp_api_url = "https://graph.facebook.com/v20.0/440740459111490/messages"
+genai.configure(api_key="AIzaSyCWjpHTVPFceU8EEHPnQqJAKuxIb_FSA-8")
 
 name="5 min AI" 
 bot_name="Hello I am AI bot"
@@ -53,14 +54,14 @@ convo.send_message(f'''I am using Gemini api for using you as a personal bot in 
 # send the generated text from the model to whatsapp
 
 def send(answer):
-    url=f"https://graph.facebook.com/v20.0/yourid/messages"
+    url=f"https://graph.facebook.com/v20.0/440740459111490/messages"
     headers={
         'Authorization': f'Bearer {access_token}',
         'Content-Type': 'application/json'
     }
     data={
           "messaging_product": "whatsapp", 
-          "to": "test phone number", 
+          "to": "440740459111490", 
           "type": "text",
           "text":{"body": f"{answer}"},
           }
